@@ -1,0 +1,17 @@
+    
+<div class="container">
+
+        <form (ngSubmit)="processForm()">
+            
+            <div class="form group">
+                <label for="fname">recherche</label>
+                <input type="text" name="valeur" class="form-control" [(ngModel)]="valeur">
+            </div>
+           
+            <input type="submit" value="recherche" (click)="updateUser(valeur)" class="btn btn-success">
+
+           
+          
+
+        </form>
+    </div>

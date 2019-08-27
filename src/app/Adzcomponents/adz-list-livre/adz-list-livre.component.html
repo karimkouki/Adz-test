@@ -1,0 +1,58 @@
+<header>
+  
+
+</header>
+<table>
+    <thead>
+        
+    </thead>
+    <tbody>
+ 
+
+
+<input [(ngModel)]="searchText2" placeholder="search text goes here">
+<ul>
+<li *ngFor="let user of livres  | filter : searchText2">
+        {{user}}
+      </li>
+    </ul>
+    <ul>
+            <li *ngFor="let auteur1 of auteur | filter : searchText2" >
+                    {{auteur1}}
+                  </li>
+                </ul>
+
+
+<div>
+ <select id="productFilter" ng-model="searchText7" >
+  <option  *ngFor="let auteur1 of auteur | filter : searchText7" > {{auteur1}}</option>
+</select>
+</div>
+
+
+ 
+
+            <a target="_blank" *ngFor="let user of users | filter : searchText2"  >
+              
+
+                  
+                    <div class="gallery">
+
+                       
+                         
+        <img src="{{user.volumeInfo.imageLinks.smallThumbnail}}">
+     
+        <div><p>{{user.volumeInfo.description}} </p> </div>
+        <div><p>{{user.volumeInfo.authors[0]}} </p> </div>
+     
+
+      </div>
+    
+       
+
+                            </a>
+                        
+         
+                          
+    </tbody>
+</table>
